@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Set-ExecutionPolicy Unrestricted
 
 icm $executioncontext.InvokeCommand.NewScriptBlock((New-Object Net.WebClient).DownloadString("https://chocolatey.org/install.ps1"))
@@ -16,3 +17,7 @@ icm $executioncontext.InvokeCommand.NewScriptBlock((New-Object Net.WebClient).Do
  
  Invoke-Expression -Command ".\newDirectory.ps1 -argduscript c:\xxx"
  Invoke-Expression(".\newDirectory.ps1 -argduscript c:\xxx3")
+=======
+$path = "C:\rdz1","C:\rdz2","C:\rdz3\rdz4"
+New-Item -Path $path -ItemType directory -Force | out-null
+>>>>>>> de10fa922f037a2370984675051f8165cb1f8a42
