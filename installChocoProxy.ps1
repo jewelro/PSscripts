@@ -2,6 +2,9 @@
 # Prologue : Copyright 2017
 # Author   : Dzevel ROGOVIC
 # =====================================================================
+
+# Install via proxy
+
 cls
 Set-ExecutionPolicy Unrestricted
 

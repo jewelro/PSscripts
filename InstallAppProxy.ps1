@@ -2,6 +2,9 @@
 # Prologue : Copyright 2017
 # Author   : Dzevel ROGOVIC
 # =====================================================================
+
+# Install via proxy
+
 cls
 Set-ExecutionPolicy Unrestricted
 
@@ -14,3 +17,5 @@ $downloader.Proxy = $proxy
 
 icm $executioncontext.InvokeCommand.NewScriptBlock($downloader.DownloadString("https://chocolatey.org/install.ps1"))
 
+# install some programs
+Invoke-Expression("choco install vlc -y")
