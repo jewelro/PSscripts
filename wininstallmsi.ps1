@@ -59,9 +59,9 @@ Write-toLog -logMessage "start execution $AppDepot $AppInstaller"
 
 try {
 	$downloader = (new-object System.Net.WebClient)
-	$downloader.DownloadFile($AppDepot+$AppInstaller, "$LocalTempDir\$AppInstaller")
-	#msiexec /package "$LocalTempDir\$AppInstaller" /passive
-	$msifile= "$LocalTempDir\$AppInstaller" 
+	$downloader.DownloadFile($AppDepot+$AppInstaller, "$CurrentDir\$AppInstaller")
+	#msiexec /package "$CurrentDir\$AppInstaller" /passive
+	$msifile= "$CurrentDir\$AppInstaller" 
 	$arguments= " /passive"
 	Verify-ifInstalled -msifile $msifile -arguments $arguments
 	# Exit
